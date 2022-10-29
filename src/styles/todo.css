@@ -1,0 +1,45 @@
+.main-div{
+    background-color: #D7CACA;
+    border: 3px solid grey;
+    margin: 5px;
+    padding: 5px;
+}
+
+p{
+    text-align: center;
+    font-size: 40px;
+}
+
+.title-div {
+    margin: auto;
+}
+
+input{
+    width: 100%;
+}
+
+#my_add_btn{
+    background: yellow;
+    width: 100px;
+}
+
+#delete-btn{
+    border: none;
+}
+
+ul{
+    background-color: white;
+    border: 2px solid grey;
+    color: black;
+    margin: auto;
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+li{
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid grey;
+}
