@@ -24,7 +24,8 @@ input{
 }
 
 #delete-btn{
-    border: none;
+    border: none;    
+    justify-content:right;
 }
 
 ul{
@@ -42,4 +43,9 @@ li{
     padding: 5px;
     margin: 5px;
     border: 1px solid grey;
+}
+
+#space-for-button
+{
+    width: 10%;
 }

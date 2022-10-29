@@ -49,21 +49,29 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
       keyPress(e) {
         if (e.keyCode === 13) {
-			this.addTodo();
+          this.addTodo();
         }
       },
-	  addTodo(){
-		//get the store
+      addTodo() {
+        //get the store
         const store = getStore();
 
-		const newArray =  store.globalList.concat(store.inputValue);
+        const newArray = store.globalList.concat(store.inputValue);
 
-		console.log(newArray);
+        setStore({ globalList: newArray });
 
-		setStore({ globalList: newArray });
+        this.updateTaskToEnter("");
+      },
+      handleRemove(id) {
+        //get the store
+        const store = getStore();
 
-		this.updateTaskToEnter("");
-	  }
+        store.globalList.splice(id, 1);
+
+        setStore({ globalList: store.globalList });
+
+        alert("Delete was successful");
+      },
     },
   };
 };

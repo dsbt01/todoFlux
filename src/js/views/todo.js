@@ -1,9 +1,8 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 import "../../styles/todo.css";
 
 import { Context } from "../store/appContext";
-
 
 export const Todo = () => {
   const [, setCount] = useState(0);
@@ -29,7 +28,20 @@ export const Todo = () => {
               </button>
             </div>
           </div>
-          <ul id="my-list" className="todo-container"></ul>
+          <ul id="my-list" className="todo-container">
+            {store.globalList.map((item, i) => (
+              <li key={i}>
+                {item}&nbsp;
+                <button
+                  id="delete-btn"
+                  type="button"
+                  onClick={() => actions.handleRemove(i)}
+                >
+                  x
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
