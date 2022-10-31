@@ -35,7 +35,7 @@ export const Todo = () => {
                   {item}&nbsp;
                   <button
                     id="delete-btn"
-                    type="button"
+                    type="button"                    
                     onClick={() => actions.handleRemove(i)}
                   >
                     x
@@ -43,7 +43,7 @@ export const Todo = () => {
                 </li>
               ))
             ) : (
-              <h2>Please enter a value</h2>
+              <h2>No tasks, add a task</h2>
             )}
           </ul>
         </div>
