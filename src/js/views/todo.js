@@ -29,18 +29,22 @@ export const Todo = () => {
             </div>
           </div>
           <ul id="my-list" className="todo-container">
-            {store.globalList.map((item, i) => (
-              <li key={i}>
-                {item}&nbsp;
-                <button
-                  id="delete-btn"
-                  type="button"
-                  onClick={() => actions.handleRemove(i)}
-                >
-                  x
-                </button>
-              </li>
-            ))}
+            {store.globalList.length > 0 ? (
+              store.globalList.map((item, i) => (
+                <li key={i}>
+                  {item}&nbsp;
+                  <button
+                    id="delete-btn"
+                    type="button"
+                    onClick={() => actions.handleRemove(i)}
+                  >
+                    x
+                  </button>
+                </li>
+              ))
+            ) : (
+              <h2>Please enter a value</h2>
+            )}
           </ul>
         </div>
       </div>
